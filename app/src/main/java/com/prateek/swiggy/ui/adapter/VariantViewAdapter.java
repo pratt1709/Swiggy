@@ -52,7 +52,7 @@ public class VariantViewAdapter extends RecyclerView.Adapter<VariantViewAdapter.
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         final Variation varient = mVariant.get(position);
         holder.mainTitle.setText("" + varient.getName());
-        holder.mainPrice.setText("" + varient.getPrice());
+        holder.mainPrice.setText(holder.mainPrice.getResources().getString(R.string.rs) + " " + varient.getPrice());
         if (varient.isSelected()) {
             holder.mainRadioButton.setChecked(true);
         } else {
