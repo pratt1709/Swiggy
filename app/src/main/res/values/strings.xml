@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Swiggy</string>
+    <string name="app_title">EVENTS</string>
+    <string name="request_progress">Fetching Pizza Customizations, please wait</string>
+    <string name="request_error">Error Occurred, Please try refreshing</string>
+    <string name="request_success">Successfully fetched customizations</string>
+    <string name="share_chooser">Share using</string>
+
+    <string name="refresh_title">Refresh</string>
+
+    <string name="outlets_around">%s outlets around you</string>
+
+    <string name="price">Cost for two:</string>
+</resources>
