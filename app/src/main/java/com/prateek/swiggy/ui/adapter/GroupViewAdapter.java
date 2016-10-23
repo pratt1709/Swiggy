@@ -1,5 +1,7 @@
 package com.prateek.swiggy.ui.adapter;
 
+import android.graphics.Color;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +23,8 @@ import java.util.ArrayList;
 public class GroupViewAdapter extends RecyclerView.Adapter<GroupViewAdapter.MyViewHolder> {
 
     private ArrayList<VariantGroup> mVariant;
+
+    private int isSelectedPosition = 0;
 
     public GroupViewAdapter() {
 
@@ -48,10 +52,19 @@ public class GroupViewAdapter extends RecyclerView.Adapter<GroupViewAdapter.MyVi
         final VariantGroup varient = mVariant.get(position);
         holder.variantGroupTitle.setText(varient.getName());
 
+        if (position == isSelectedPosition) {
+            holder.mMainGroupView.setCardBackgroundColor(Color.WHITE);
+        } else {
+            holder.mMainGroupView.setCardBackgroundColor(Color.CYAN);
+        }
+
         holder.mMainGroupView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EventBus.getDefault().post(new GroupItemClickEvent(position));
+
+                isSelectedPosition = position;
+                notifyDataSetChanged();
             }
         });
     }
@@ -70,12 +83,12 @@ public class GroupViewAdapter extends RecyclerView.Adapter<GroupViewAdapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        View mMainGroupView;
+        CardView mMainGroupView;
         TextView variantGroupTitle;
 
         public MyViewHolder(View view) {
             super(view);
-            mMainGroupView = view.findViewById(R.id.main_group_view);
+            mMainGroupView = (CardView) view.findViewById(R.id.variant_item_card_view);
             variantGroupTitle = (TextView) view.findViewById(R.id.group_item_title);
         }
     }
