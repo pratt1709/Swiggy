@@ -7,11 +7,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 
-
-/**
- * Created by prateek.kesarwani on 21/10/16.
- */
-
 public interface RestClient {
 
     String end_point = "https://api.myjson.com/";

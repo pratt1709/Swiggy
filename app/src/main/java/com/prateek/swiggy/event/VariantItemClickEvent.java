@@ -2,10 +2,6 @@ package com.prateek.swiggy.event;
 
 import com.prateek.swiggy.rest.Request.GroupChoice;
 
-/**
- * Created by prateek.kesarwani on 22/10/16.
- */
-
 public class VariantItemClickEvent extends ItemClickEvent {
 
 

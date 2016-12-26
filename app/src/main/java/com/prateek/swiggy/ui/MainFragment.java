@@ -18,11 +18,6 @@ import com.prateek.swiggy.ui.adapter.VariantViewAdapter;
 
 import java.util.ArrayList;
 
-/**
- * Created by prateek.kesarwani on 22/10/16.
- */
-
-
 public class MainFragment extends Fragment {
 
     private static final String VARIANT_GROUP = "variant_list";

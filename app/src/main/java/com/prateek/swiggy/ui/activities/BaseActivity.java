@@ -4,10 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import org.greenrobot.eventbus.EventBus;
 
-/**
- * Created by prateek.kesarwani on 22/10/16.
- */
-
 public class BaseActivity extends AppCompatActivity {
 
     @Override

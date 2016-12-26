@@ -16,10 +16,6 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 
-/**
- * Created by prateek.kesarwani on 22/10/16.
- */
-
 public class GroupViewAdapter extends RecyclerView.Adapter<GroupViewAdapter.MyViewHolder> {
 
     private ArrayList<VariantGroup> mVariant;

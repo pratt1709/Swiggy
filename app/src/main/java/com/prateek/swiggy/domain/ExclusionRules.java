@@ -6,10 +6,6 @@ import com.prateek.swiggy.rest.Request.Variation;
 
 import java.util.ArrayList;
 
-/**
- * Created by prateek.kesarwani on 22/10/16.
- */
-
 // Multiple ways to handle this, but for limited time, this could work
 public class ExclusionRules {
 
